@@ -3,11 +3,13 @@ using DoctorPortal_DotNetCore.Models;
 using DoctorPortal_DotNetCore.Models.Dto;
 using DoctorPortal_DotNetCore.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace DoctorPortal_DotNetCore.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class HomeController : Controller
     {
         //private readonly IVillaService _villaService;

@@ -1,0 +1,113 @@
+﻿@model DoctorPortal_DotNetCore.Models.Dto.AppointmentDto
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Appointment</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Appointment</a></li>
+                            <li><a href="#">Create </a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Create Appointment</strong>
+                        <div class="float-right">
+                            <a asp-action="Index" asp-controller="Patient" class="btn btn-outline-primary btn-sm">
+                                <i class="fa fa-backward"></i> Back
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body card-block">
+
+                        <form asp-action="Create">
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="DoctorId" class="form-control-label"></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" id="select" asp-for="DoctorId" class="form-control">
+                                        <option value="0">Select Doctor</option>
+                                        <option value="1">Dr.Ahmed</option>
+                                        <option value="2">Dr.Waqas</option>
+                                        <option value="3">Dr.Raza</option>
+                                    </select>
+                                    <span asp-validation-for="DoctorId" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="PatientId" class="form-control-label"></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" id="select" asp-for="PatientId" class="form-control">
+                                        <option value="0">Select Patient</option>
+                                        <option value="1">Sara Usman</option>
+                                        <option value="2">Talha</option>
+                                        <option value="3">Ali</option>
+                                    </select>
+                                    <span asp-validation-for="PatientId" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="BookingDate" class="form-control-label  "></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="BookingDate" class="form-control" />
+                                    <span asp-validation-for="BookingDate" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success ">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- .animated -->
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.chosen-select').chosen({ width: "200px" });
+    });
+</script>
+
+
+
+

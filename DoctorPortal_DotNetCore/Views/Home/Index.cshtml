@@ -1,42 +1,177 @@
-﻿@using Microsoft.AspNetCore.Components
-@* @model IEnumerable<DoctorPortal_DotNetCore.Models.Dto.VillaDTO> *@
-
-<img class="d-block w-100" src="images/home/slide1.jpg" alt="">
-
-<hr />
-<div class="row" style="--bs-gutter-x:0">
-    @* @foreach(var villa in Model){
-        <div class="p-4 col-md-12 col-lg-6">
-            <div class="row" style="border-radius:20px; border: 1px solid #ffffff">
-                <div class="col-4">
-                    <img class="d-block w-100" style="border-radius:20px;" src="@villa.ImageUrl" alt="First slide">
-                </div>
-                <div class="col-8">
-                    <p class="card-title text-warning" style="font-size:xx-large">@villa.Name</p>
-                    <p class="card-text">
-                        @((MarkupString)villa.Details)
-                    </p>
-                </div>
-                <div class="col-12">
-                    <div class="row pb-3 pt-2">
-                        <div class="col-4">
-                            <a href="" class="btn btn-success form-control btn-block">Book</a>
+﻿<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class="pe-7s-news-paper"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">23</span></div>
+                                    <div class="stat-heading">Pending Appointments</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <span class="">Max Occupancy : @villa.Occupancy adults </span><br />
-                            <span class=" pt-1">Villa Size : @villa.Sqft sqft</span><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="pe-7s-alarm"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">89</span></div>
+                                    <div class="stat-heading">Today's Appointments</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <span class="text-warning float-end font-weight-bold pt-1" style="font-size:25px;">
-                                USD
-                                <span style="border-bottom:1px solid #ff6a00">
-                                    @villa.Rate.ToString("c")
-                                </span>
-                            </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-3">
+                                <i class="pe-7s-browser"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">349</span></div>
+                                    <div class="stat-heading">Total Appointments</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="pe-7s-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">790</span></div>
+                                    <div class="stat-heading">Total Patients</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    } *@
+        <!-- /Widgets -->
+        <!-- Orders -->
+        <div class="orders">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="box-title">Recent Appointments </h4>
+                        </div>
+                        <div class="card-body--">
+                            <div class="table-stats order-table ov-h">
+                                <table class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th class="serial">#</th>
+                                           
+                                            <th>ID</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Name</th>
+                                            <th>Contact</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="serial">1.</td>
+                                            
+                                            <td> #5469 </td>
+                                            <td>Sep 05,2024</td>
+                                            <td>9:35 PM</td>
+                                            <td>  <span class="name">Louis Stanley</span> </td>
+                                            <td> <span class="product">03345678979</span> </td>
+                                           
+                                            <td>
+                                                <span class="badge badge-pending">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="serial">2.</td>
+                                           
+                                            <td> #5468 </td>
+                                            <td>Sep 05,2024</td>
+                                            <td>9:10 PM</td>
+                                            <td>  <span class="name">Gregory Dixon</span> </td>
+                                            <td> <span class="product">03345678979</span> </td>
+                                            <td>
+                                                <span class="badge badge-pending">Pending</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="serial">3.</td>
+                                           
+                                            <td> #5467 </td>
+                                            <td>Sep 05,2024</td>
+                                            <td>6:05 PM</td>
+                                            <td>  <span class="name">Catherine Dixon</span> </td>
+                                            <td> <span class="product">03345678979</span> </td>
+                                            <td>
+                                                <span class="badge badge-complete">Complete</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="serial">4.</td>
+                                           
+                                            <td> #5466 </td>
+                                            <td>Sep 05,2024</td>
+                                            <td>5:05 PM</td>
+                                            <td>  <span class="name">Mary Silva</span> </td>
+                                            <td> <span class="product">03345678979</span> </td>
+                                            <td>
+                                                <span class="badge badge-complete">Complete</span>
+                                            </td>
+                                        </tr>
+                                        <tr class=" pb-0">
+                                            <td class="serial">5.</td>
+                                           
+                                            <td> #5465 </td>
+                                            <td>Sep 05,2024</td>
+                                            <td>5:05 PM</td>
+                                            <td>  <span class="name">Johnny Stephens</span> </td>
+                                            <td> <span class="product">03345678979</span> </td>
+                                            <td>
+                                                <span class="badge badge-complete">Complete</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- /.table-stats -->
+                        </div>
+                    </div> <!-- /.card -->
+                </div>  <!-- /.col-lg-8 -->
+
+            </div>
+        </div>
+    </div>
+    <!-- .animated -->
 </div>
+
+

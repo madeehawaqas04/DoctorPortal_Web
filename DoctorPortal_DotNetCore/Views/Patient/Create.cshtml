@@ -1,67 +1,121 @@
 ﻿@model DoctorPortal_DotNetCore.Models.Dto.PatientDTO
 
-<form asp-action="Create">
-    <br />
-    <div class="container border p-3">
-        <h1 class="text-primary">Create Patient</h1>
-        <hr />
 
-        <div class="row">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-            <div class="col-2">
-                <label asp-for="FirstName" class="control-label pt-2" style="font-size:20px;"></label>
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Patient</h1>
+                    </div>
+                </div>
             </div>
-            <div class="col-10 pb-3">
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Patient</a></li>
+                            <li><a href="#">Create </a></li>
+                        </ol>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-2">
-                <label asp-for="LastName" class="control-label pt-2" style="font-size:20px;"></label>
-            </div>
-            <div class="col-10 pb-3">
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-
-            <div class="col-2">
-                <label asp-for="PhoneNumber" class="control-label pt-2" style="font-size:20px;"></label>
-            </div>
-            <div class="col-10 pb-3">
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-
-            <div class="col-2">
-                <label asp-for="Email" class="control-label pt-2" style="font-size:20px;"></label>
-            </div>
-            <div class="col-10 pb-3">
-                <input asp-for="Email" class="form-control"></input>
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-
-
-            <div class="col-2">
-                <label asp-for="Address" class="control-label pt-2" style="font-size:20px;"></label>
-            </div>
-            <div class="col-10 pb-3">
-                <textarea asp-for="Address" class="form-control"></textarea>
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-           
-            <div class="col-5  offset-2">
-                <input type="submit" value="Create" class="btn btn-success form-control" />
-            </div>
-            <div class="col-5">
-                <a asp-action="Index" asp-controller="Patient" class="btn-primary btn form-control ">Back to List</a>
-            </div>
-
         </div>
     </div>
-</form>
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Create Patient</strong>
+                        <div class="float-right">
+                            <a asp-action="Index" asp-controller="Patient" class="btn btn-outline-primary btn-sm">
+                                <i class="fa fa-backward"></i> Back
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body card-block">
+
+                        <form asp-action="Create">
+                                
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                        <label asp-for="FirstName" class="form-control-label" ></label>
+                                    </div>
+                                        <div class="col-12 col-md-9">
+                                        <input asp-for="FirstName" class="form-control" />
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="LastName" class="form-control-label"  ></label>
+                                    </div>
+                                <div class="col-12 col-md-9">
+                                        <input asp-for="LastName" class="form-control" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="PhoneNumber" class="form-control-label  "  ></label>
+                                    </div>
+                                <div class="col-12 col-md-9">
+                                        <input asp-for="PhoneNumber" class="form-control" />
+                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Email" class="form-control-label  "  ></label>
+                                    </div>
+                                <div class="col-12 col-md-9">
+                                        <input asp-for="Email" class="form-control"/>
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Address" class="form-control-label  "  ></label>
+                                    </div>
+                                <div class="col-12 col-md-9">
+                                        <textarea asp-for="Address" class="form-control"></textarea>
+                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                    </div>
+                                    </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success ">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- .animated -->
+</div>
+
+
 
                 
-@section Scripts {
+@* @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
 }
+ *@

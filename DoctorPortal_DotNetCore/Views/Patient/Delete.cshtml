@@ -1,5 +1,115 @@
 ﻿@model DoctorPortal_DotNetCore.Models.Dto.PatientDTO
 
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Patient</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Patient</a></li>
+                            <li><a href="#">Delete </a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Delete Patient</strong>
+                        <div class="float-right">
+                            <a asp-action="Index" asp-controller="Patient" class="btn btn-outline-primary btn-sm">
+                                <i class="fa fa-backward"></i> Back
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body card-block">
+
+                        <form asp-action="Create">
+
+                            <input hidden asp-for="Id" />
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="FirstName" class="form-control-label"></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="FirstName" disabled class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="LastName" class="form-control-label"></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="LastName" disabled class="form-control" />
+                                  
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="PhoneNumber" class="form-control-label  "></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="PhoneNumber" disabled class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Email" class="form-control-label  "></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="Email" disabled class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Address" class="form-control-label"></label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <textarea asp-for="Address" disabled class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" value="Delete">Delete</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- .animated -->
+</div>
+
+@* 
+
 <form asp-action="Delete">
     <br />
     <div class="container border p-3">
@@ -39,8 +149,9 @@
         </div>
     </div>
 </form>
+ *@
 
-
-@section Scripts {
+@* @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+ *@
