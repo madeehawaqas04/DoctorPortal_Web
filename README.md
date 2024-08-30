@@ -10,7 +10,7 @@ Register:
 
 <img src="https://raw.githubusercontent.com/madeehawaqas04/DoctorPortal_Web/v1/DoctorPortal_DotNetCore/wwwroot/images/Project_Screens/register.png?raw=true" />
 
-Create Patient:
+Dashboard:
 
 <img src="https://raw.githubusercontent.com/madeehawaqas04/DoctorPortal_Web/v1/DoctorPortal_DotNetCore/wwwroot/images/Project_Screens/Home.png?raw=true" />
 
